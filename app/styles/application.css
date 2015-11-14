@@ -1,0 +1,240 @@
+.img-container {
+    position: absolute;
+    z-index: 0;
+    left: 50%;
+    top: 50%;
+    width: 80%;
+    height: 70%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%)
+}
+
+.list-images {
+    text-align: left;
+    font-size: 0
+}
+
+.list-images li {
+    display: inline-block;
+    height: 150px;
+    position: relative;
+    z-index: 0;
+    padding: 4px 4px 30px;
+    background-color: #fff;
+    border: 1px solid #ddd
+}
+
+.list-images li > div {
+    position: absolute;
+    z-index: 0;
+    left: 0;
+    width: 100%;
+    height: 28px;
+    bottom: 0
+}
+
+.list-images li > div input[type=radio] {
+    padding-left: 4px;
+    margin: 2px auto 0;
+    display: block
+}
+
+.list-images li > span:first-child {
+    display: inline-block;
+    vertical-align: top;
+    position: absolute;
+    z-index: 0;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: -webkit-calc(100% - 28px);
+    height: calc(100% - 28px)
+}
+
+.list-images li img {
+    max-width: 100%;
+    max-height: 100%;
+    margin-bottom: 15px;
+    position: absolute;
+    z-index: 0;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    display: block
+}
+
+.list-images li span {
+    display: block;
+    cursor: pointer
+}
+
+.list-images .delete-image {
+    display: inline-block;
+    vertical-align: top;
+    cursor: pointer;
+    font-size: 14px;
+    color: #000;
+    text-align: center;
+    min-width: 58px;
+    height: 28px;
+    background-color: #ccc;
+    padding-top: 4px;
+    text-decoration: none;
+    -webkit-transition: background .5s;
+    transition: background .5s
+}
+
+.list-images .delete-image:hover {
+    background-color: #f00
+}
+
+.alert-success .close {
+    margin-top: 5px
+}
+
+.radio-label {
+    display: block;
+    margin-left: 2px;
+    vertical-align: top;
+    font-size: 11px;
+    margin-top: 0;
+    white-space: nowrap;
+    position: relative;
+    z-index: 0
+}
+
+.radio-label span {
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    top: 0;
+    -webkit-transform: translate(-50%, 0);
+    -ms-transform: translate(-50%, 0);
+    transform: translate(-50%, 0)
+}
+
+.form-group:after {
+    content: ".";
+    clear: both;
+    display: block;
+    height: 0;
+    font-size: 0;
+    visibility: hidden
+}
+
+.cropper-canvas {
+    background-color: #fff
+}
+
+.wrapper-file {
+    position: relative;
+    z-index: 0
+}
+
+.wrapper-file label {
+    margin: 0;
+    padding: 5px 0;
+    cursor: pointer;
+    text-align: center;
+    display: block;
+    -webkit-transition: background .5s;
+    transition: background .5s;
+    background-color: #5effb2
+}
+
+.wrapper-file label:hover {
+    background-color: #45ff28
+}
+
+.wrapper-file input[type=file] {
+    visibility: hidden;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 0
+}
+
+.wrapper-modal {
+    position: fixed;
+    z-index: 100;
+    background-color: rgba(0, 0, 0, .75);
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    pointer-events: none;
+    -webkit-transition: opacity .7s;
+    transition: opacity .7s
+}
+
+.wrapper-modal.active {
+    opacity: 1;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    pointer-events: auto
+}
+
+.list-buttons {
+    margin: 0;
+    position: absolute;
+    text-align: center;
+    top: 100%;
+    margin-top: 15px;
+    left: 0;
+    width: 100%;
+    z-index: 1
+}
+
+.list-buttons li {
+    display: inline-block
+}
+
+.list-buttons li:first-child {
+    margin-right: 30px
+}
+
+.image-crop-buttons {
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: top;
+    outline: none;
+    font-size: 25px;
+    background-color: #35aa47;
+    width: 100px;
+    padding: 5px 10px;
+    border: none;
+    -webkit-transition: all .5s;
+    transition: all .5s;
+    color: #fff
+}
+
+.image-crop-buttons:hover {
+    background-color: #2b8b3a
+}
+
+.cancel-image {
+    background-color: #ccc
+}
+
+@media (max-width: 768px) {
+    .list-buttons {
+        padding-left: 0;
+        bottom: -110px
+    }
+
+    .list-buttons li {
+        display: block
+    }
+
+    .list-buttons li:first-child {
+        margin-right: 0
+    }
+}
